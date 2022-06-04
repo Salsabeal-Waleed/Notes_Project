@@ -1,0 +1,17 @@
+<div class="container py-3 fixed-top d-flex text-white  justify-content-between w-75">
+
+  <h3>Notes</h3>
+
+  <div class="dropdown text-white">
+    <button class="btn btn-transparent dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+      Login
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <li><a *ngIf="!isLogin" routerLinkActive="item" class="dropdown-item" routerLink="/login">Login</a></li>
+      <li><a *ngIf="!isLogin" routerLinkActive="item" class="dropdown-item" routerLink="/register">Register</a></li>
+      <li><a *ngIf="isLogin" routerLinkActive="item" class="dropdown-item" routerLink="/profile">Profile</a></li>
+      <li><a *ngIf="isLogin" routerLinkActive="item" (click)="callLogOut()" class="dropdown-item" routerLink="/login">LogOut</a></li>
+    </ul>
+  </div>
+
+</div>

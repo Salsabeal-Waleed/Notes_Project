@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+
+body
+{
+  background-color:#040f13;
+}
+
+#Layer{
+  background-color:  rgba(101,108,133,0.8);
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 200;
+}
+a
+{
+  cursor: pointer;
+}
+
+.bG-brown
+{
+  background-color: #645556 !important;
+}
+
+.btn-pro , .bg-pro
+{
+  background-color: #1e7898 !important;
+}

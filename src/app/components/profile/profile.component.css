@@ -1,0 +1,18 @@
+
+.succ , .fail
+{
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.failT , .notFondNotes
+{
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.note , .alert-pro
+{
+  background-color: #1e7898 !important;
+}

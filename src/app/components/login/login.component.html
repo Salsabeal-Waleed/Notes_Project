@@ -1,0 +1,50 @@
+
+
+<div class="vh-100  position-relative " id="particles-js">
+
+
+  <div class="position-absolute w-75 d-flex justify-content-center top-50 start-50 translate-middle ">
+
+    <div  *ngIf="messageError" class=" alert-danger mt-3 w-75 h-50 d-flex justify-content-center align-items-center ">
+      <h3 class="text-center w-100 text-white mx-auto ">{{messageError}}</h3>
+    </div>
+
+    <div *ngIf="messageDone" class="aleart alert-success  mt-3 w-75 h-75 d-flex justify-content-center align-items-center ">
+      <h3 class="text-center w-75 text-white mx-auto ">{{messageDone}}</h3>
+    </div>
+
+    <form class="text-white mx-auto w-75" [formGroup]="loginForm" (ngSubmit)="login()" >
+
+      <div class="line d-flex justify-content-center ">
+
+        <div class="me-4 w-75">
+
+
+       <div>
+         <label for="email">email</label>
+         <input class="form-control" formControlName="email" type="email" placeholder="email" id="email" autofocus>
+         <div *ngIf="loginForm.get('email')?.errors && loginForm.get('email')?.touched" class="alert alert-danger">
+           <p *ngIf="loginForm.get('email')?.errors?.['required']">email is required</p>
+           <p *ngIf="loginForm.get('email')?.errors?.['email']">email must be in right format</p>
+         </div>
+      </div>
+
+
+      <div>
+        <label for="password">password</label>
+        <input class="form-control" formControlName="password" type="password" placeholder="password" id="password">
+        <div *ngIf="loginForm.get('password')?.errors && loginForm.get('password')?.touched" class="alert alert-danger">
+          <p *ngIf="loginForm.get('password')?.errors?.['required']">password is required</p>
+          <p *ngIf="loginForm.get('password')?.errors?.['pattern']">password must be from 5 to 15 character without  spaces </p>
+        </div>
+      </div>
+
+      <input [disabled]="loginForm.invalid" type="submit" value="Login" class="form-control bg-pro mt-3">
+
+      <div class="clearfix"></div>
+        </div>
+      </div>
+    </form>
+
+  </div>
+</div>

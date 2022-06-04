@@ -1,0 +1,18 @@
+
+.btn-check:focus+.btn, .btn:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgb(165 175 189 / 25%);
+}
+.btn {
+
+  color: #ffffff;
+}
+.btn:hover {
+  color: #aeb1b5;
+}
+
+.item
+{
+  color: #ffffff;
+  background-color: #1e7898;
+}
